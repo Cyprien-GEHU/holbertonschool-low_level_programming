@@ -10,7 +10,7 @@ int main(void)
 	char size_char;
 	int size_int;
 	long int size_long_int;
-	double long size_long_long_int;
+	long long int size_long_long_int;
 	float size_float;
 
 	printf("Size of a char: %ld byte(s)\n", sizeof(size_char));
