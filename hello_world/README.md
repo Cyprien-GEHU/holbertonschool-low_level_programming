@@ -4,3 +4,4 @@
 3-name:The script compiles a C files and creates an excutable named "cisfun"
 4-puts.c: The programme that prints exactly "Programming is like building a multilingual puzzle"
 5-printf.c: The programme print "with proper grammar, but the outcome is a pieceof art,"
+6-size.c: the programme prints the size of various type on the computer it is compiled and run on
