@@ -2,3 +2,4 @@
 1-last_digit.c : The program assign random number to the variable "n" each time is exectued, we take the last digit and we compare, we sendsend a message
 2-print_alphabet.c: The program print the alphabet in lowercase
 3-print_alphabets.c: The program print the alphabet in lowercase and uppercase
+4-print_alphabt.c: The program print the alphabet except for "q" and "e"
