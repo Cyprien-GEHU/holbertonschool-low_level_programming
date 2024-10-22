@@ -10,11 +10,10 @@
 int _islower(int c)
 {
 
-	if (c > 60 && c < 95)
+	if (c >= 65 && 90 >= c)
 	{
 		return (0);
 	}
-
 	return (1);
 }
 
