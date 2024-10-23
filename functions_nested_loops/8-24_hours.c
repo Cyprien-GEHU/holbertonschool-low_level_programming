@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * _abs - computes the absolute value
- *
- *@r: the value of interger
+ * jack_bauer - print every minute of the day
  *
  */
 
@@ -13,7 +11,7 @@ void jack_bauer(void)
 
 	for (h1 = 0; h1 < 3; h1++)
 	{
-		for (h2 = 0; h2 <=9 ; h2++)
+		for (h2 = 0; h2 <= 9 ; h2++)
 		{
 			for (m1 = 0; m1 < 6; m1++)
 			{
@@ -27,10 +25,10 @@ void jack_bauer(void)
 					_putchar('\n');
 				}
 			}
-			if(h1 == 2 && h2 ==3)
+			if (h1 == 2 && h2 == 3)
 			{
 				return;
-			}	
+			}
 		}
 	}
 }
