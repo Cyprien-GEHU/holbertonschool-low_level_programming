@@ -6,4 +6,5 @@
 5-more_numbers.c: the function print 10 time the numbers from 0 to 14
 6-print_line.c: the function draw a straight line in the terminal
 7-print_diagonal.c: The function draw a diagonal line on the terminal
-8-print_square.c: the function print a square 
+8-print_square.c: the function print a square
+9-fizz_buzz.c: The program print numbers 1 to 100 but multiplie 3 print "Fizz" and multiplies 5 print "Buzz" 
