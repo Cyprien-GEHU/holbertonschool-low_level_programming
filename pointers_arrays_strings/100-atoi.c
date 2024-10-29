@@ -11,20 +11,32 @@
 int _atoi(char *s)
 {
 	int i = 0;
-	int valeur;
+	int valeur = 0;
 	int signe = 1;
+	int e = 0;
+	int n = 0;
 
-	while(*s)
+	while(*s != '\0')
 	{
 		if (s[i] == '-')
 			signe *= -1;
 
-		if (s[i] >= '0' && s[i] <= '9')
-			valeur = s[i];	
+		if (s[i] >= 48 && s[i] <= 57)
+		{
+			while(e != 1)
+			{
+				if(s[n] >= 48 && s[n] <= 57)
+				{
+					valeur = (valeur * 10) + (s[n] - '0');
+					n++;
+				}
+				else
+					e = 1;
+			}
+		}
 		s++;
 		i++;
 	}
 	valeur = valeur * signe;
-
 	return (valeur);
 }
