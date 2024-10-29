@@ -3,39 +3,38 @@
 /**
  * _atoi - convert the string to integer
  *
- * @s : the string 
+ * @s : the string
  *
- * Return: integer 
+ * Return: integer
  */
 
 int _atoi(char *s)
 {
-	int i = 0;
+	int i;
 	int valeur = 0;
 	int signe = 1;
-	int e = 0;
-	int n = 0;
+	int len = 0;
 
-	while(*s != '\0')
+	while (*s)
 	{
-		if (s[i] == '-')
+		s++;
+		len++;
+	}
+
+	s = s - len;
+
+	for (i = 0; i < len; i++)
+	{
+		if (s[i] == 45)
 			signe *= -1;
 
 		if (s[i] >= 48 && s[i] <= 57)
+			valeur = (valeur * 10) + (s[i] - '0');
+		if (valeur > 0)
 		{
-			while(e != 1)
-			{
-				if(s[n] >= 48 && s[n] <= 57)
-				{
-					valeur = (valeur * 10) + (s[n] - '0');
-					n++;
-				}
-				else
-					e = 1;
-			}
+			if (s[i] < 48 || s[i] > 57)
+				break;
 		}
-		s++;
-		i++;
 	}
 	valeur = valeur * signe;
 	return (valeur);
