@@ -5,4 +5,5 @@
 4-print_rev.c: the function print a string in reverse
 5-rev_string.c: the function reverse a string
 6-puts2.c: the function print every other character of a string, staring with the first character
-7-puts_half.c: the function print the half of the string 
+7-puts_half.c: the function print the half of the string
+8-print_array.c: the fuction print n elements of an array of integers 
