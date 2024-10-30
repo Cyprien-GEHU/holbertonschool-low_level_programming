@@ -17,3 +17,5 @@ Partie 2:
 2-strncpy.c: The function will copies a string
 3-strcmp.c: the function compares two string
 4-rev_array.c: The function reverse the content of an array of integers
+5-string_toupper.c: the function change all lowercase of a strint to uppercase
+6-cap_string.c: the function capitalizalises all words of a string
