@@ -13,4 +13,5 @@ Partie 1:
 
 Partie 2:
 0-strcat.c: the function concatenates two string
-1-strncat.c:the function concatenates two string with n 
+1-strncat.c: the function concatenates two string with n
+2-strncpy.c: The function will copies a string
