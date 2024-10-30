@@ -16,3 +16,4 @@ Partie 2:
 1-strncat.c: the function concatenates two string with n
 2-strncpy.c: The function will copies a string
 3-strcmp.c: the function compares two string
+4-rev_array.c: The function reverse the content of an array of integers
