@@ -11,8 +11,20 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int retour;
+	int final = 0;
+	int i;
+	int first = 0;
+	int second = 0;
 
-	retour = s1[0] - s2[0];
-	return (retour);
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0' ; i++)
+	{
+		if (s1[i] != s2[i])
+		{
+			first = first + s1[i];
+			second = second + s2[i];
+			final = first - second;
+			return (final);
+		}
+	}
+	return (0);
 }
