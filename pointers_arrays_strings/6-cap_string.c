@@ -26,7 +26,8 @@ char *cap_string(char *text)
 	{
 		if (text[i] < 'a' && text[i] > 'z')
 		{
-			text[i + 1] = text[i + 1] - 32;
+			if (text[i+1] >= 'a' && text[i+1] <= 'z') 
+				text[i+1] = text[i+1] - 32;
 		}
 
 	}	
