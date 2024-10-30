@@ -12,4 +12,5 @@ Partie 1:
 100-atoi.c: the function convert a string to integer
 
 Partie 2:
-0-strcat.c: the function concatenates two string 
+0-strcat.c: the function concatenates two string
+1-strncat.c:the function concatenates two string with n 

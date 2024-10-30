@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - print the half of the string
+ * _strcat - concatenates two strings
  *
  * @dest : the first string
  * @src : the second string
