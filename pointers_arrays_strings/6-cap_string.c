@@ -22,6 +22,9 @@ char *cap_string(char *text)
 	text = text - len;
 	len = len - 1;
 
+	if (text[0] >= 'a' && text[0] <= 'z')
+		text[0] = text[0] - 32;
+
 	for (i = 0; i < len; i++)
 	{
 		if (text[i] == '\t' || text[i] == ' ' || text[i] == '.' || text[i] == '\n' ||
