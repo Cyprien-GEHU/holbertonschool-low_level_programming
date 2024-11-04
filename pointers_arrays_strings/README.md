@@ -28,3 +28,4 @@ Partie 3:
 3-strspn.c: the function get the length of a prefix substring
 4-strpbrk.c: the function searches a string for any of a set of bytes
 5-strstr.c: the function locates a substring
+7-print_chessboard.c: the function print the chessboard
