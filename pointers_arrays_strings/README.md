@@ -29,3 +29,4 @@ Partie 3:
 4-strpbrk.c: the function searches a string for any of a set of bytes
 5-strstr.c: the function locates a substring
 7-print_chessboard.c: the function print the chessboard
+8-print_diagsums.c: the function prunt the sum of two diagonals of a square matrix of integers
