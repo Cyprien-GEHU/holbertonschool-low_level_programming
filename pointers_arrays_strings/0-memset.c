@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - concatenates two strings
+ * _memset - fills memory with a constant byte
  *
  * @s : the memory of the area
  * @b : constant byte
