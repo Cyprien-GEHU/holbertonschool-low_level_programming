@@ -26,4 +26,4 @@ Partie 3:
 1-memcpy.c: the function copies the memory area
 2-strchr.c: the function locates a character in a string
 3-strspn.c: the function get the length of a prefix substring
-
+4-strpbrk.c: the function searches a string for any of a set of bytes
