@@ -20,3 +20,6 @@ Partie 2:
 5-string_toupper.c: the function change all lowercase of a strint to uppercase
 6-cap_string.c: the function capitalizalises all words of a string
 7-leet.c: the function encodes a string into 1337 (leet)
+
+Partie 3:
+0-memset.c: the function will fills memory with a constant byte
