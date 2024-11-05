@@ -1,4 +1,4 @@
-0-puts_recursion.c : The function print a string /n
+0-puts_recursion.c : The function print a string 
 1-print_rev_recursion.c: the function print a string in reverse
 2-strlen_recursion.c: return the length of a string
 3-factorial.c: the function returns the factorial of a given number
