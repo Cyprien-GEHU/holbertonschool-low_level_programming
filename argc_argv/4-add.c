@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int i = 0;
 	int result = 0;
 
-	if (argc == 1)
+	if (argc < 3)
 	{
 		printf("0\n");
 		return (0);
@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 		else
 			result += atoi(argv[i]);
 	}
+
 	printf("%d\n", result);
 	return (0);
 }
