@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int i = 0;
 	int result = 0;
 
-	if (argc < 3)
+	if (argc <= 1)
 	{
 		printf("0\n");
 		return (0);
