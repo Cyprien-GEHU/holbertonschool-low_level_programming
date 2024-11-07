@@ -26,21 +26,19 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!(atoi(argv[i])))
+
+		for (n = 0; argv[i][n] != '\0'; n++)
 		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{
-			for (n = 0; argv[i][n] != '\0'; n++)
+			if (argv[i][n] >= '0' && argv[i][n] <= '9')
+				add = add * 10 + argv[i][n] - '0';
+			else
 			{
-				if (argv[i][n] >= '0' && argv[i][n] <= '9')
-					add = add * 10 + argv[i][n] - '0';
+				printf("Error\n");
+				return (1);
 			}
-			result += add;
-			add = 0;
 		}
+		result += add;
+		add = 0;
 	}
 	printf("%d\n", result);
 	return (0);
