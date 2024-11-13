@@ -12,7 +12,7 @@
 int *array_range(int min, int max)
 {
 	int *ari;
-	int x;
+	int x, n;
 
 	if (min > max)
 		return (NULL);
@@ -26,6 +26,9 @@ int *array_range(int min, int max)
 	}
 
 	for (x = min; x <= max; x++)
-		ari[x] = x;
+	{
+		ari[n] = x;
+		n++;
+	}
 	return (ari);
 }
