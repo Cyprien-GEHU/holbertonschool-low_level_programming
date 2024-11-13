@@ -5,7 +5,7 @@
  * malloc_checked - allocates memory
  * @b : length of the srting
  *
- * Return: loc or exit(98) 
+ * Return: loc or exit(98)
  */
 
 void *malloc_checked(unsigned int b)
