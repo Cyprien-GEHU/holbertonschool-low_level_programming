@@ -16,7 +16,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len1 = 0;
 	unsigned int len2 = 0;
 	unsigned int x;
-	int y = 0;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -42,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (x < len1)
 			arr[x] = s1[x];
 		else
-			arr[x] = s2[y++];
+			arr[x] = s2[x - len1];
 	}
 	arr[x] = '\0';
 	return (arr);
