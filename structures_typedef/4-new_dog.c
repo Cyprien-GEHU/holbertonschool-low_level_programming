@@ -3,6 +3,37 @@
 #include <stdio.h>
 
 /**
+ * _strcpy - print the half of the string
+ *
+ * @dest : the string copy
+ * @src : the string source
+ *
+ * Return: "dest"
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int len = 0;
+	int i;
+
+	while (*src)
+	{
+		len++;
+		src++;
+	}
+
+	src = src - len;
+
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
+
+/**
  * new_dog - creates a new dog
  * @name : the name of the dog
  * @age : age of the dog
@@ -38,8 +69,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	nd->name = name;
-	nd->owner = owner;
+	nd->name = _strcpy(nd->name, name);
+	nd->owner = _strcpy(nd->owner, owner);
 
 	return (nd);
 }
