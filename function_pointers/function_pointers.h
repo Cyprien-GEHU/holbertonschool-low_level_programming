@@ -1,5 +1,5 @@
-#ifndef DOG_FILE
-#define DOG_FILE
+#ifndef FUNCTION_POINTERS_FILE
+#define FUNCTION_POINTERS_FILE
 #include <stddef.h>
 
 int _putchar(char c);
