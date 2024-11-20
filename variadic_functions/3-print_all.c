@@ -74,18 +74,21 @@ void print_all(const char * const format, ...)
 
 	va_start(printall, format);
 	sepa = "";
-	while (format != NULL && format[i / 4] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
-		n = i % 4;
-		if (format[i / 4] == check[n].letter[0])
+		while (n < 4)
 		{
-			printf("%s", sepa);
-			check[n].func(printall);
-			sepa = ", ";
+			if (format[i] == check[n].letter[0])
+			{
+				printf("%s", sepa);
+				check[n].func(printall);
+				sepa = ", ";
+			}
+			n++;
 		}
+		n = 0;
 		i++;
 	}
-
 	printf("\n");
 	va_end(printall);
 }
