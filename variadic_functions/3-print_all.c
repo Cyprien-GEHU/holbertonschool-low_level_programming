@@ -33,7 +33,7 @@ void _printint(va_list va)
 
 void _printfloat(va_list va)
 {
-	printf("%.3f", va_arg(va, double));
+	printf("%f", va_arg(va, double));
 }
 
 /**
@@ -68,8 +68,8 @@ void print_all(const char * const format, ...)
 	};
 
 	va_list printall;
-	int i = 0;
-	int n = 0;
+	unsigned int i = 0;
+	unsigned int n = 0;
 	char *sepa;
 
 	va_start(printall, format);
