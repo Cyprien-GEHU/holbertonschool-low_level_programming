@@ -14,7 +14,7 @@ void _printchar(va_list va)
 }
 
 /**
- * _printchar - print char
+ * _printint - print int
  * @va : the list
  *
  */
@@ -26,25 +26,30 @@ void _printint(va_list va)
 }
 
 /**
- * _printchar - print char
+ * _printfloat - print float
  * @va : the list
  *
  */
 
 void _printfloat(va_list va)
 {
-	printf("%f", va_arg(va, double));
+	printf("%.3f", va_arg(va, double));
 }
 
 /**
- * _printchar - print char
- * @format : the list
+ * _printstr - print char
+ * @va : the list
  *
  */
 
 void _printstr(va_list va)
 {
-	printf("%s", va_arg(va, char *));
+	char *s;
+
+	s = va_arg(va, char*);
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s", s);
 }
 
 /**
@@ -69,7 +74,7 @@ void print_all(const char * const format, ...)
 
 	va_start(printall, format);
 	sepa = "";
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		while (n < 4)
 		{
