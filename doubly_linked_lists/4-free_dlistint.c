@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * free_dlistint_t - free the list
+ * free_dlistint - free the list
  * @head : the content of element
  *
  */
