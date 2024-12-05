@@ -1,16 +1,16 @@
 #include "main.h"
 #define BUF_SIZE 1024
 /**
- * copy_function - function copy
+ * _copy - function copy
  * @fm : file source
  * @ft : file destination
  */
 
-void copy_function(char *fm, char *ft)
+void _copy(char *fm, char *ft)
 {
 	int f_from = open(fm, O_RDONLY);
 	int f_to = open(ft, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	ssize_t copy, wrote;
+	ssize_t text_copy, text_wrote;
 	char b[BUF_SIZE];
 
 	if (f_from == -1)
@@ -23,16 +23,16 @@ void copy_function(char *fm, char *ft)
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", ft);
 		exit(99);
 	}
-	while ((copy = read(f_from, b, BUF_SIZE)) > 0)
+	while ((text_copy = read(f_from, b, BUF_SIZE)) > 0)
 	{
-		wrote = write(f_to, b, copy);
-		if (copy != wrote)
+		text_wrote = write(f_to, b, text_copy);
+		if (text_copy != text_wrote)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", ft);
 			exit(99);
 		}
 	}
-	if (copy == -1)
+	if (text_copy == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fm);
 		exit(98);
@@ -51,20 +51,19 @@ void copy_function(char *fm, char *ft)
 
 /**
  * main - copies the content of a file to another file
- * @ac : number of argument
- * @av : argument
+ * @argc : number of argument
+ * @argv : argument
  *
  * Return: 0
  */
 
-int main(int ac, char **av)
+int main(int argc, char *argv[])
 {
-	if (ac != 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	copy_function(av[1], av[2]);
-
+	_copy(argv[1], argv[2]);
 	return (0);
 }
