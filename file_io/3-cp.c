@@ -1,5 +1,5 @@
 #include "main.h"
-
+#define BUF_SIZE 1024
 /**
  * copy_function - function copy
  * @fm : file source
@@ -11,7 +11,7 @@ void copy_function(char *fm, char *ft)
 	int f_from = open(fm, O_RDONLY);
 	int f_to = open(ft, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	ssize_t copy, wrote;
-	char b[1024];
+	char b[BUF_SIZE];
 
 	if (f_from == -1)
 	{
@@ -23,13 +23,13 @@ void copy_function(char *fm, char *ft)
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", ft);
 		exit(99);
 	}
-	while ((copy = read(f_from, b, 1024)) > 0)
+	while ((copy = read(f_from, b, BUF_SIZE)) > 0)
 	{
 		wrote = write(f_to, b, copy);
 		if (copy != wrote)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read to file %s\n", ft);
-			exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", ft);
+			exit(99);
 		}
 	}
 	if (copy == -1)
@@ -64,8 +64,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	else
-		copy_function(av[1], av[2]);
+	copy_function(av[1], av[2]);
 
 	return (0);
 }
