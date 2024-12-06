@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * binary_to_uint - convert bit to decimal
- * @b : chain of character
+ * print_binary - convert all to binary
+ * @n : long integer
  *
- * Return: 0 or result
  */
 
 void print_binary(unsigned long int n)
